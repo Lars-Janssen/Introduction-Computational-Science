@@ -1,0 +1,21 @@
+All pictures are maed by running entropy.py and choosing options, except random_line.png,
+where you also have to change the 0 to a 1 on line 19.
+
+neighbour_100 and cell_100 are made by choosing mode 0 and 1 respectively,
+with 100 seeds and 100 samples. An interesting thing is the empty band around
+lambda = 0 to lamdba = 0.2. They also seem to have the same general shape
+as in Langton's paper, but shoot up earlier, at around lambda=0.4. Maybe
+this is because of the isotropy condition, which I didn't understand, or
+some other difference.
+These pictures can also be recreated by reading from the text files.
+
+random_line and table_line are made with mode 0, and have 10 seeds and 10
+lambdas. It clearly shows a difference between the methods. The table walk
+entropy always goes up, while the random entropy varies wildly.
+
+Sometimes the entropy goes down as lambda goes higher with the table walk
+method, which I found strange, but the explanation is logical. A new rule causes
+a previous structure to be annihilated, which in turn leads to fewer structures.
+You can see this in lower and higher, which were made with k=8,r=2,
+start_seed = 3 and lambda_seed  = 3. They have lambda = 0.16 and
+lambda = 0.32, respectively.
